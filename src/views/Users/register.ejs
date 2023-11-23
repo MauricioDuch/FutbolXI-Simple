@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs')  %> 
+    <link rel="stylesheet" href="/css/register.css">
+    <link rel="icon" type="image/png" href="/img/logo-futbolXI.png"/>
+    <title> Registrar Tu Cuenta </title>
+
+</head>
+<body>
+    <header>
+        <%- include('../partials/header.ejs')  %> 
+    </header>
+    <main>
+        <section class="footerout">
+            <h1> Todavía no estás registrado? Podes hacerlo completando los siguientes datos:</h1>
+            <form action="/register/save" method="post" class="formulario-registro" enctype="multipart/form-data">
+                <label for="nombre"> Nombre </label>
+                <input type="text" name="nombre" required>
+                <label for="apellido"> Apellido </label>
+                <input type="text" name="apellido" required>
+                <label for="email"> Email</label>
+                <input type="text" name="email" >
+                <% if (locals.errores && locals.errores.email) { %>
+                    <p class="feedback">
+                        <%= locals.errores.email.msg %> 
+                    </p>
+                <% } %>
+                <label for="clave"> Ingrese una contraseña </label>
+                <input type="password" name="clave">
+                <% if (locals.errores && locals.errores.clave) { %>
+                    <p class="feedback">
+                        <%= locals.errores.clave.msg %> 
+                    </p>
+                <% } %>
+                <label for="confirmarClave"> Confirme su contraseña </label>
+                <input type="password" name="confirmarClave">
+                <% if (locals.errores && locals.errores.confirmarClave) { %>
+                    <p class="feedback">
+                        <%= locals.errores.confirmarClave.msg %> 
+                    </p>
+                <% } %>
+                <label for="imagen"> Imagen de usuario </label>
+                <input type="file" name="imagen">
+                <div class="botones">
+                    <button type="submit"> Crear </button>
+                    <button type="reset"> Borrar </button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <%- include('../partials/footer.ejs')  %> 
+    </footer>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs')  %> 
+    <link rel="stylesheet" href="\css\login.css">
+    <link rel="icon" type="image/png" href="/img/logo-futbolXI.png"/>
+    <title> Login </title>
+
+<body>
+    <header>
+        
+        <%- include('../partials/header.ejs')  %> 
+    </header>
+    <main>
+        <section class="footerout">
+            <h1> Ingresa tu cuenta:</h1>
+            <form action="/access" method="post" class="formulario-registro">
+                <label for="email"> Email</label>
+                <input type="email" name="email" required>
+                <% if (locals.errores && locals.errores.email) { %>
+                    <p class="feedback">
+                        <%= locals.errores.email.msg %> 
+                    </p>
+                <% } %>
+                <label for="clave"> Contraseña </label>
+                <input type="password" name="clave" required>
+                <% if (locals.errores && locals.errores.clave) { %>
+                    <p class="feedback">
+                        <%= locals.errores.clave.msg %> 
+                    </p>
+                <% } %>
+                <label for="check"> Recuerda mi contraseña</label>
+                <input type="checkbox" id="check" name="check">
+                <div class="botones">
+                    <button type="submit"> Ingresar </button>
+                    <button type="reset"> Borrar </button> 
+                </div>
+            </form>
+            <article class="enlaces">
+                <p>¿Olvidaste tu contraseña? Podes recuperarla haciendo click <a href="#">aquí</a></p>
+                <p>Si todavía no tenés una cuenta, hace click <a href="/register">aquí</a></p>    
+                 
+            </article>
+        </section>
+    </main>
+    <footer>
+        <%- include('../partials/footer.ejs')  %> 
+    </footer>
+</body>
+</html>

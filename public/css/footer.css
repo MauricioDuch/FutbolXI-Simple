@@ -1,0 +1,80 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+footer {
+    position: relative;
+    background-color: #248232;
+    display: flex;
+    justify-content: space-between;
+}
+footer p {
+    font-size: 0.6rem;
+    display:block;
+    margin: 0.6125rem .3125rem;
+    color: white;
+}
+
+.iconos-redes {
+    font-size: 1.2rem;
+}
+
+.iconos-redes a i {
+    color: white;
+}
+
+
+.logo-twitter {
+    position: absolute;
+    top: .5rem;
+    right: 5.3125rem;
+    padding: 0.3125rem 0.5rem;
+    background-color: black;
+    border-radius: 3.125rem;
+    width: 2.125rem;
+    height: 2.125rem;
+}
+
+.logo-instagram {
+    position: absolute;
+    top: 0.5rem;
+    right: 2.8125rem;
+    padding: 0.25rem 0.5625rem;
+    background-color: black;
+    border-radius: 3.125rem;
+    width: 2.125rem;
+    height: 2.125rem;
+}
+
+.logo-facebook {
+    position: absolute;
+    top:0.5rem;
+    right: 0.3125rem;
+    padding: 0.3125rem 0.6875rem;
+    background-color: black;
+    border-radius: 3.125rem;
+    width: 2.125rem;
+    height: 2.125rem;
+}
+
+@media screen and (min-width: 768px) {
+    footer p {
+        font-size: 0.8rem;
+    }
+
+    .logo-twitter {
+        right: 6.25rem;
+    }
+
+    .logo-instagram {
+        right: 3.4375rem;
+    }
+
+    .logo-facebook {
+        right: 0.625rem;
+    }
+    .ofertas{
+        margin-bottom: 2.3%;
+    }
+}

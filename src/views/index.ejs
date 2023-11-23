@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs')  %> 
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="icon" type="image/png" href="/img/logo-futbolXI.png"/>
+    <title> Pagina Principal </title>
+
+</head>
+<body>
+    <header>
+        <%- include('./partials/header.ejs')  %> 
+    </header>
+    <main> 
+        <img src="/img/imagen-principal-home.jpg" alt="Imagen Principal" id="imagen-principal">
+        <section>
+            <h3 class="texto-oferta">Sección de ofertas</h3>
+             <section class="ofertas">
+                <% products.filter(elemento => {if (elemento.oferta == "Si") { %> 
+        
+                <%- include("./partials/ofertas.ejs",{elemento:elemento}) %> 
+                <%}})%> 
+            </section>
+        </section>
+    </main>
+    <footer>
+        <%- include('./partials/footer.ejs')  %> 
+    </footer>
+</body>
+</html>
