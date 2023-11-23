@@ -94,3 +94,5 @@ Les dejamos el [link](https://trello.com/b/RnNenVro/futbol-xi) a nuestro tablero
 ## Reuniones Weeklies
 [Archivo de reuniones](./Design/Documentos/Weekly.md)
 
+##Trabajo completo con todos los commits que hicimos se encuentra en el repositorio de
+[Mateo Brena]()
